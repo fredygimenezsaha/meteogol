@@ -7,13 +7,13 @@ import SubscribeSection from "../sections/SubscribeSection.vue";
 </script>
 
 <template>
-    <HeroSection />
+    <!-- <HeroSection /> -->
 
-    <FeatureSection />
+    <!-- <FeatureSection />
 
-    <DownloadSection />
+    <DownloadSection /> -->
 
     <FaqSection />
 
-    <SubscribeSection />
+    <!-- <SubscribeSection /> -->
 </template>
