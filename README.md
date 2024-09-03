@@ -1,9 +1,9 @@
 # Landing page made with Tailwind css and Vue js.
 
-> ### Live URL: https://fahimanzamdip.github.io/vue-landing-page/
+> ### Live URL: https://meteogol.netlify.app/
 
 ## Local Installation
-- `` git clone https://github.com/FahimAnzamDip/vue-landing-page.git ``
+- `` git clone https://github.com/fredygimenezsaha/meteogol.git ``
 - `` cd /path/to/project ``
 - `` npm install ``
 - `` npm run dev ``
