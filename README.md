@@ -9,4 +9,4 @@
 - `` npm run dev ``
 
 ## Screenshot
-![vue-landing-page](screenshot.png)
+![meteogol](screenshot.png)
