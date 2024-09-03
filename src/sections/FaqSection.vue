@@ -25,7 +25,7 @@ const fetchFixtures = async (date) => {
 const fetchWeather = async (city) => {
   try {
     // Primero, obtenemos las coordenadas de la ciudad
-    const geoResponse = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=47fc8bb2fff633cbbf87b611532ec8c4`);
+    const geoResponse = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=47fc8bb2fff633cbbf87b611532ec8c4`);
     const geoData = await geoResponse.json();
     
     if (geoData.length === 0) {
