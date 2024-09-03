@@ -9,7 +9,7 @@ const fetchFixtures = async (date) => {
     const response = await fetch(`https://v3.football.api-sports.io/fixtures?league=2&season=2024&date=${date}`, {
       headers: {
         'x-rapidapi-host': 'v3.football.api-sports.io',
-        'x-rapidapi-key': '020ca0175ae97a08189647959cd302b3'
+        'x-rapidapi-key': import.meta.env.VITE_FOOTBALL_API_KEY
       }
     });
     const data = await response.json();
@@ -25,7 +25,7 @@ const fetchFixtures = async (date) => {
 const fetchWeather = async (city) => {
   try {
     // Primero, obtenemos las coordenadas de la ciudad
-    const geoResponse = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=47fc8bb2fff633cbbf87b611532ec8c4`);
+    const geoResponse = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${import.meta.env.VITE_WEATHER_API_KEY}`);
     const geoData = await geoResponse.json();
     
     if (geoData.length === 0) {
@@ -35,7 +35,7 @@ const fetchWeather = async (city) => {
     const { lat, lon } = geoData[0];
     
     // Luego, obtenemos el clima para esas coordenadas
-    const weatherResponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=47fc8bb2fff633cbbf87b611532ec8c4&units=metric`);
+    const weatherResponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${import.meta.env.VITE_WEATHER_API_KEY}&units=metric`);
     const weatherData = await weatherResponse.json();
     
     return weatherData;
